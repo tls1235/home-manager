@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./programs/zsh.nix
-    ./apps/kitty.nix
+    ./modules/zsh.nix
+    ./modules/kitty.nix
   ];
 
   home = {
