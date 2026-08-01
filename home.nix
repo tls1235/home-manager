@@ -3,7 +3,6 @@
   imports = [
     ./modules/zsh.nix
     ./modules/kitty.nix
-    ./nixvim.nix
   ];
 
   home = {
