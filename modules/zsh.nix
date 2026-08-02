@@ -44,8 +44,7 @@
       hard = "shutdown now";
       nix-gc = "nix-collect-garbage -d";
       v = "nvim";
-      s = "sudo -E nice -19";
-      # from cachyos-config.zsh
+      sk = "sudo -E nice -19 kitty";
       make = "make -j`nproc`";
       ninja = "ninja -j`nproc`";
       n = "ninja";
