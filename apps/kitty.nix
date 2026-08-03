@@ -8,15 +8,17 @@ let
   cfg = config.kitty;
 in
 {
-  options.kitty.wallpaper = lib.mkOption {
-    type = lib.types.str;
-    default = "";
-    description = "path to kitty wallpaper";
-  };
-  options.kitty.enable = lib.mkOption {
-    type = lib.types.bool;
-    default = false;
-    description = "whether to enable";
+  options.kitty = {
+    wallpaper = lib.mkOption {
+      type = lib.types.str;
+      default = "";
+      description = "path to kitty wallpaper";
+    };
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "whether to enable";
+    };
   };
 
   config.programs.kitty = {
