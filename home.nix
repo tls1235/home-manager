@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./modules/zsh.nix
     ./modules/kitty.nix
+    ./uni-programs/zsh.nix
+    ./uni-programs/direnv.nix
   ];
 
   home = {
