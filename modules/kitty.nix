@@ -2,10 +2,19 @@
 {
   programs.kitty = {
     enable = true;
-    package = null;
+    package = pkgs.symlinkJoin {
+      name = "kitty-gl";
+      paths = [ pkgs.kitty ];
+      nativeBuildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        rm $out/bin/kitty
+        makeWrapper ${pkgs.nixgl.auto.nixGLDefault}/bin/nixGL $out/bin/kitty \
+        --add-flags "${pkgs.kitty}/bin/kitty"
+      '';
+    };
     font = {
       size = 11.0;
-      name = "monospace";
+      name = "FiraMono Nerd Font Mono";
     };
     settings = {
       background_image = "/home/tls123/Pictures/wallpapers/kitty-background.png";

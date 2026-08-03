@@ -39,6 +39,7 @@
     };
 
     shellAliases = {
+      hms = "home-manager switch --impure";
       zzz = "systemctl suspend & sleep 1";
       soft = "systemctl soft-reboot";
       hard = "shutdown now";
