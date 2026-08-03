@@ -1,7 +1,26 @@
-{ pkgs, ... }:
 {
-  programs.kitty = {
-    enable = true;
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+let
+  cfg = config.kitty;
+in
+{
+  options.kitty.wallpaper = lib.mkOption {
+    type = lib.types.str;
+    default = "";
+    description = "path to kitty wallpaper";
+  };
+  options.kitty.enable = lib.mkOption {
+    type = lib.types.bool;
+    default = false;
+    description = "whether to enable";
+  };
+
+  config.programs.kitty = {
+    enable = cfg.enable;
     package = pkgs.symlinkJoin {
       name = "kitty-gl";
       paths = [ pkgs.kitty ];
@@ -17,7 +36,7 @@
       name = "FiraMono Nerd Font Mono";
     };
     settings = {
-      background_image = "/home/tls123/Pictures/wallpapers/kitty-background.png";
+      background_image = cfg.wallpaper;
       background_image_layout = "scaled";
       background_tint = 0.91;
       remember_window_size = false;
