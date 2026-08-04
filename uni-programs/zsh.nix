@@ -45,7 +45,6 @@
       hard = "shutdown now";
       nix-gc = "nix-collect-garbage -d";
       v = "nvim";
-      sk = "sudo -E nice -19 kitty";
       make = "make -j`nproc`";
       ninja = "ninja -j`nproc`";
       n = "ninja";
