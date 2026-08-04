@@ -50,13 +50,8 @@
       ninja = "ninja -j`nproc`";
       n = "ninja";
       c = "clear";
-      rmpkg = "sudo pacman -Rsn";
-      cleanch = "sudo pacman -Scc";
       fixpacman = "sudo rm /var/lib/pacman/db.lck";
       update = "sudo pacman -Syu";
-      apt = "man pacman";
-      apt-get = "man pacman";
-      please = "sudo";
       tb = "nc termbin.com 9999";
       cleanup = "sudo pacman -Rsn $(pacman -Qtdq)";
       jctl = "journalctl -p 3 -xb";
@@ -111,7 +106,7 @@
       zstyle ':completion:*:git-checkout:*' sort false
       zstyle ':completion:*:descriptions' format '[%d]'
       zstyle ':completion:*' menu no
-      zstyle ':fzf-tab:complete:*:*' fzf-preview 'eza -1 --color=always $realpath 2>/dev/null || cat $realpath 2>/dev/null'
+      #zstyle ':fzf-tab:complete:*:*' fzf-preview 'eza -1 --color=always $realpath 2>/dev/null || cat $realpath 2>/dev/null'
       zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
       zstyle ':fzf-tab:*' use-fzf-default-opts yes
       zstyle ':fzf-tab:*' switch-group '<' '>'
