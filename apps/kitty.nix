@@ -35,7 +35,7 @@ in
     };
     font = {
       size = 11.0;
-      name = "FiraMono Nerd Font Mono";
+      name = "JetBrainsMono Nerd Font";
     };
     settings = {
       background_image = cfg.wallpaper;
