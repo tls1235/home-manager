@@ -23,16 +23,19 @@ in
 
   config.programs.kitty = {
     enable = cfg.enable;
-    package = pkgs.symlinkJoin {
-      name = "kitty-gl";
-      paths = [ pkgs.kitty ];
-      nativeBuildInputs = [ pkgs.makeWrapper ];
-      postBuild = ''
-        rm $out/bin/kitty
-        makeWrapper ${pkgs.nixgl.auto.nixGLDefault}/bin/nixGL $out/bin/kitty \
-        --add-flags "${pkgs.kitty}/bin/kitty"
-      '';
-    };
+    package = null;
+    /*
+      pkgs.symlinkJoin {
+        name = "kitty-gl";
+        paths = [ pkgs.kitty ];
+        nativeBuildInputs = [ pkgs.makeWrapper ];
+        postBuild = ''
+          rm $out/bin/kitty
+          makeWrapper ${pkgs.nixgl.auto.nixGLDefault}/bin/nixGL $out/bin/kitty \
+          --add-flags "${pkgs.kitty}/bin/kitty"
+        '';
+      };
+    */
     font = {
       size = 11.0;
       name = "JetBrainsMono Nerd Font";
