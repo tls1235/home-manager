@@ -9,6 +9,7 @@
   home.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
     DISABLE_MAGIC_FUNCTIONS = "true";
+    ENABLE_CORRECTION = "true";
     COMPLETION_WAITING_DOTS = "true";
     HISTORY_IGNORE = "(&|[bf]g|c|clear|history|exit|q|pwd|* --help)";
     LESS_TERMCAP_md = "$(tput bold 2>/dev/null; tput setaf 2 2>/dev/null)";
