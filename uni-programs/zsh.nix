@@ -9,7 +9,6 @@
   home.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
     DISABLE_MAGIC_FUNCTIONS = "true";
-    ENABLE_CORRECTION = "false";
     COMPLETION_WAITING_DOTS = "true";
     HISTORY_IGNORE = "(&|[bf]g|c|clear|history|exit|q|pwd|* --help)";
     LESS_TERMCAP_md = "$(tput bold 2>/dev/null; tput setaf 2 2>/dev/null)";
@@ -114,6 +113,8 @@
       setopt AUTO_LIST
       setopt AUTO_MENU
       setopt ALWAYS_TO_END
+      unsetopt correct
+      unsetopt correct_all
       zstyle ':completion:*' matcher-list \
         'm:{a-z}={A-Z}' \
         'r:|[._-]=* r:|=*' \
