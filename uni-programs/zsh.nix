@@ -9,7 +9,7 @@
   home.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
     DISABLE_MAGIC_FUNCTIONS = "true";
-    ENABLE_CORRECTION = "true";
+    ENABLE_CORRECTION = "false";
     COMPLETION_WAITING_DOTS = "true";
     HISTORY_IGNORE = "(&|[bf]g|c|clear|history|exit|q|pwd|* --help)";
     LESS_TERMCAP_md = "$(tput bold 2>/dev/null; tput setaf 2 2>/dev/null)";
@@ -39,7 +39,7 @@
     };
 
     shellAliases = {
-      hms = "home-manager switch --impure";
+      hm = "home-manager --impure";
       zzz = "systemctl suspend & sleep 1";
       soft = "systemctl soft-reboot";
       hard = "shutdown now";
