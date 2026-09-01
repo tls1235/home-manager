@@ -40,6 +40,7 @@
 
     shellAliases = {
       hm = "home-manager --impure";
+      btop = "btop --force-utf";
       zzz = "systemctl suspend & sleep 1";
       soft = "systemctl soft-reboot";
       hard = "shutdown now";
