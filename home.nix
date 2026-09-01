@@ -26,6 +26,7 @@
     nixfmt
     zsh-forgit
     manix
+    eza
   ];
 
   kitty = {

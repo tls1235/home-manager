@@ -44,6 +44,7 @@
       soft = "systemctl soft-reboot";
       hard = "shutdown now";
       nix-gc = "nix-collect-garbage -d";
+      ls = "eza";
       v = "nvim";
       make = "make -j`nproc`";
       ninja = "ninja -j`nproc`";
