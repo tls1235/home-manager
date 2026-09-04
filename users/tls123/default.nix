@@ -14,7 +14,6 @@
   ];
 
   kitty = {
-    wallpaper = "/home/tls123/Pictures/wallpapers/kitty-background.png";
     enable = true;
   };
 
