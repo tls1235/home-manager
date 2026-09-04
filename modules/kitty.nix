@@ -11,7 +11,7 @@ in
   options.kitty = {
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "../extras/default-kitty-background.png";
+      default = "~/.config/home-manager/extras/default-kitty-background.png";
       description = "path to kitty wallpaper";
     };
     enable = lib.mkOption {
@@ -34,6 +34,11 @@ in
       default = 11.0;
       description = "the size of the text of the terminal";
     };
+    background_brightness = lib.mkOption {
+      type = lib.types.int;
+      default = 5;
+      description = "how bright you want the wallpaper to be";
+    };
   };
 
   config.programs.kitty = {
@@ -46,7 +51,7 @@ in
     settings = {
       background_image = cfg.wallpaper;
       background_image_layout = "scaled";
-      background_tint = 0.91;
+      background_tint = 1 - cfg.background_brightness / 100.0;
       remember_window_size = false;
       initial_window_width = cfg.width;
       initial_window_height = cfg.height;
