@@ -27,6 +27,7 @@
     zsh-forgit
     manix
     eza
+    krita
   ];
 
   kitty = {
