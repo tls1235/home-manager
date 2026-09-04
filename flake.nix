@@ -17,18 +17,34 @@
       home-manager,
       self,
       ...
-    }:
+    }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ nixgl.overlay ];
-      };
+      mkHome =
+        {
+          system,
+          username,
+          hostname,
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ (import ./overlays) ];
+          };
+          extraSpecialArgs = { inherit inputs hostname; };
+          modules = [
+            ./modules/default.nix
+            ./users/${username}
+            ./hosts/${hostname}
+          ];
+        };
     in
     {
-      homeConfigurations."tls123" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
+      homeConfigurations = {
+        "tls123@channel-9158" = mkHome {
+          system = "x86_64-linux";
+          username = "tls123";
+          hostname = "channel-9158";
+        };
       };
     };
 }

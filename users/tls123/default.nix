@@ -10,8 +10,6 @@
   */
 
   imports = [
-    ./uni-programs/default.nix
-    ./apps/default.nix
   ];
 
   home = {

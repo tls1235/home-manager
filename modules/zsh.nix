@@ -39,7 +39,7 @@
     };
 
     shellAliases = {
-      hm = "home-manager --impure";
+      hm = "home-manager --flake . --impure";
       btop = "btop --force-utf";
       zzz = "systemctl suspend & sleep 1";
       soft = "systemctl soft-reboot";
