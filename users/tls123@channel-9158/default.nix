@@ -16,7 +16,4 @@
   kitty = {
     enable = true;
   };
-
-  manual.json.enable = true;
-  programs.home-manager.enable = true;
 }

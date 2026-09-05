@@ -7,4 +7,6 @@
     ./zsh.nix
     ./kitty.nix
   ];
+  manual.json.enable = true;
+  programs.home-manager.enable = true;
 }

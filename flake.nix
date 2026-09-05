@@ -19,6 +19,7 @@
       ...
     }@inputs:
     let
+      lib = nixpkgs.lib;
       mkHome =
         {
           system,
@@ -28,14 +29,21 @@
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             inherit system;
-            overlays = [ (import ./overlays) ];
+            overlays = [
+              (import ./overlays)
+              nixgl.overlay
+            ];
           };
           extraSpecialArgs = { inherit inputs hostname; };
-          modules = [
-            ./modules/default.nix
-            ./users/${username}
-            ./hosts/${hostname}
-          ];
+          modules =
+            (lib.optional (builtins.pathExists (./users + "/${username}")) (./users + "/${username}"))
+            ++ (lib.optional (builtins.pathExists (./hosts + "/${hostname}")) (./hosts + "/${hostname}"))
+            ++ lib.optional (builtins.pathExists (./users + "/${username}@${hostname}")) (
+              ./users + "/${username}@${hostname}"
+            )
+            ++ [
+              ./modules
+            ];
         };
     in
     {
