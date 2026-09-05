@@ -3,6 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +20,7 @@
       nixgl,
       nixpkgs,
       home-manager,
+      plasma-manager,
       self,
       ...
     }@inputs:
@@ -43,6 +49,7 @@
             )
             ++ [
               ./modules
+              plasma-manager.homeModules.plasma-manager
             ];
         };
     in
