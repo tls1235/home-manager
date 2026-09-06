@@ -11,7 +11,7 @@ in
   options.kitty = {
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "~/.config/home-manager/extras/default-kitty-background.png";
+      default = "${../extras/default-kitty-background.png}";
       description = "path to kitty wallpaper";
     };
     enable = lib.mkOption {
