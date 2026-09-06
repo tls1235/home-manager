@@ -11,7 +11,7 @@ in
   options.kitty = {
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "${../extras/default-kitty-background.png}";
+      default = "${../files/default-kitty-background.png}";
       description = "path to kitty wallpaper";
     };
     enable = lib.mkOption {
