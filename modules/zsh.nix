@@ -7,6 +7,7 @@
   };
 
   home.sessionVariables = {
+    EDITOR = "nvim";
     NIXPKGS_ALLOW_UNFREE = "1";
     DISABLE_MAGIC_FUNCTIONS = "true";
     ENABLE_CORRECTION = "true";

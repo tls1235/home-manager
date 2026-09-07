@@ -40,7 +40,7 @@
               nixgl.overlay
             ];
           };
-          extraSpecialArgs = { inherit inputs hostname; };
+          extraSpecialArgs = { inherit inputs hostname username; };
           modules =
             (lib.optional (builtins.pathExists (./users + "/${username}")) (./users + "/${username}"))
             ++ (lib.optional (builtins.pathExists (./hosts + "/${hostname}")) (./hosts + "/${hostname}"))

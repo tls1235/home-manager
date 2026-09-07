@@ -6,7 +6,6 @@
     ./devenv.nix
     ./zsh.nix
     ./kitty.nix
+    ./settings.nix
   ];
-  manual.json.enable = true;
-  programs.home-manager.enable = true;
 }
