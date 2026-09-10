@@ -40,6 +40,8 @@
     };
 
     shellAliases = {
+      j = "java Main.java";
+      jvc = "javac Main.java && java Main";
       hm = "home-manager --flake . --impure";
       btop = "btop --force-utf";
       zzz = "systemctl suspend & sleep 1";
