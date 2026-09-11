@@ -60,6 +60,11 @@
           username = "tls123";
           hostname = "channel-9158";
         };
+        "tls123@school-laptop" = mkHome {
+          system = "x86_64-linux";
+          username = "tls123";
+          hostname = "school-laptop";
+        };
       };
     };
 }
