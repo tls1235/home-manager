@@ -47,6 +47,7 @@
       zzz = "systemctl suspend & sleep 1";
       soft = "systemctl soft-reboot";
       hard = "shutdown now";
+      die = "poweroff";
       nix-gc = "nix-collect-garbage -d";
       ls = "eza";
       v = "nvim";
