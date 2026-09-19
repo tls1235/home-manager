@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ../../modules/nixgl.nix
   ];
 
   home.packages = with pkgs; [
-    krita
+    (config.lib.nixGL.wrap krita)
   ];
 
   kitty = {
