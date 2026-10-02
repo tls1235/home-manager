@@ -10,6 +10,6 @@
     enable = true;
     height = 600;
     width = 1050;
-    background_brightness = 7;
+    background_brightness = 5;
   };
 }
