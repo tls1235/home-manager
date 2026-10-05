@@ -134,5 +134,8 @@
       rm "$tmp"}
       source ~/.functions.sh
     '';
+    envExtra = ''
+      export LANG="en_IL.UTF-8"
+    '';
   };
 }
