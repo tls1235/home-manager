@@ -40,6 +40,7 @@
     };
 
     shellAliases = {
+      getTime = "date '+%Y-%m-%d@%H:%M:%S'";
       j = "java Main.java";
       jvc = "javac Main.java && java Main";
       hm = "home-manager --flake . --impure";

@@ -9,7 +9,7 @@
     baseIndex = 1;
     historyLimit = 5000;
     terminal = "tmux-256color";
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = "/bin/zsh";
     keyMode = "vi";
     escapeTime = 0;
     extraConfig = ''
