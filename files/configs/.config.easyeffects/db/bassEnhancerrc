@@ -1,0 +1,7 @@
+[sie][BassEnhancer#0]
+amount=10
+
+[soe][BassEnhancer#0]
+amount=1.4
+floorActive=true
+scope=110

@@ -1,0 +1,6 @@
+[soe][Autotune#0]
+bias=1
+bypass=true
+correction=0.1
+filter=0.5
+mode=1

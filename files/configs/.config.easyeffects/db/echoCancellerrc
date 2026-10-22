@@ -1,0 +1,6 @@
+[soe][EchoCanceller#0]
+echoCancellerEnforceHighPass=false
+enableEchoCanceller=false
+enableHighPassFilter=false
+highPassFilterFullBand=false
+noiseSuppressionLevel=0

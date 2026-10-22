@@ -1,0 +1,7 @@
+[sie][RNNoise#0]
+enableVad=true
+vadThres=25
+
+[soe][RNNoise#0]
+enableVad=true
+vadThres=99

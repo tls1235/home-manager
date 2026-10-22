@@ -1,0 +1,4 @@
+[soe][StereoTools#0]
+outputGain=-3.5
+softclip=true
+stereoPhase=179
