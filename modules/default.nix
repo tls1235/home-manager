@@ -7,6 +7,7 @@
     ./devenv.nix
     ./zsh.nix
     ./kitty.nix
+    ./files.nix
     ./settings.nix
   ];
 }
