@@ -17,7 +17,7 @@ outputDevice=alsa_output.usb-JCALLY_Company_CS43131_SGM8262_HIFI_Audio-01.analog
 plugins=stereo_tools#0,equalizer#0,bass_enhancer#0
 pluginsListWidth=288
 showBlocklistedApps=true
-usedPresets=zero-blue-2-SHARP:29,zero-blue-2-WARM:11,zero-blue-2-WARM-TESTING:45,zero-blue-2-SHARP-TESTING:58,zero-blue-2-BALANCED:190,zero-blue-2-BALANCED-TESTING:366,white noise:9
+usedPresets=zero-blue-2-SHARP:29,zero-blue-2-WARM:11,zero-blue-2-WARM-TESTING:45,zero-blue-2-SHARP-TESTING:58,zero-blue-2-BALANCED:190,zero-blue-2-BALANCED-TESTING:367,white noise:9
 visiblePage=pluginsPage
 visiblePlugin=equalizer#0
 
