@@ -12,4 +12,6 @@
     width = 1050;
     background_brightness = 5;
   };
+
+  easyeffects.enable = true;
 }

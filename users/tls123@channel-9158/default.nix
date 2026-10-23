@@ -11,4 +11,6 @@
   kitty = {
     enable = true;
   };
+
+  easyeffects.enable = true;
 }

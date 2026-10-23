@@ -7,7 +7,7 @@
     ./devenv.nix
     ./zsh.nix
     ./kitty.nix
-    ./files.nix
+    ./easyeffects.nix
     ./settings.nix
   ];
 }
