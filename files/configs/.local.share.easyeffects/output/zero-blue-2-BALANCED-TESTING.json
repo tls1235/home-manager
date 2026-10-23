@@ -52,7 +52,7 @@
                     "width": 4.0
                 },
                 "band3": {
-                    "frequency": 850.0,
+                    "frequency": 900.0,
                     "gain": 3.0,
                     "mode": "RLC (BT)",
                     "mute": false,
@@ -103,7 +103,7 @@
                     "width": 4.0
                 },
                 "band3": {
-                    "frequency": 850.0,
+                    "frequency": 900.0,
                     "gain": 3.0,
                     "mode": "RLC (BT)",
                     "mute": false,

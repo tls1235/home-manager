@@ -1,7 +1,0 @@
-[soe][Filter#0]
-frequency=300
-gain=5
-type=1
-
-[soe][Filter#1]
-frequency=8000

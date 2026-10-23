@@ -1,9 +1,0 @@
-[sie][Autogain#0]
-bypass=true
-maximumHistory=6
-
-[soe][Autogain#0]
-bypass=true
-maximumHistory=9
-silenceThreshold=-50
-target=-22
