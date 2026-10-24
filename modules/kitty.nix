@@ -36,7 +36,7 @@ in
     };
     background_brightness = lib.mkOption {
       type = lib.types.int;
-      default = 5;
+      default = 3;
       description = "how bright you want the wallpaper to be";
     };
   };
