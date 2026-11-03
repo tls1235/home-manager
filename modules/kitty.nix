@@ -19,11 +19,6 @@ in
       default = false;
       description = "whether to enable";
     };
-    width = lib.mkOption {
-      type = lib.types.int;
-      default = 1200;
-      description = "the width of the kitty terminal";
-    };
     height = lib.mkOption {
       type = lib.types.int;
       default = 700;
@@ -57,7 +52,7 @@ in
         background_image_layout = "scaled";
         background_tint = 1 - cfg.background_brightness / 100.0;
         remember_window_size = false;
-        initial_window_width = cfg.width;
+        initial_window_width = builtins.floor (cfg.height / 0.5625 + 0.5);
         initial_window_height = cfg.height;
         sync_to_monitor = false;
         repaint_delay = 8;
