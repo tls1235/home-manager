@@ -133,6 +133,15 @@
       manix "$@" > "$tmp"
       nvim "$tmp"
       rm "$tmp"}
+
+      Jtest() {
+       TEMPFILENAME="''${1%.java}"
+       javac "$TEMPFILENAME.java" || return
+        for f in "''${@:2}"; do
+          echo "$f" | java "$TEMPFILENAME"
+        done
+       rm ./*.class
+      }
       source ~/.functions.sh
     '';
     envExtra = ''

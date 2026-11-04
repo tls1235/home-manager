@@ -22,7 +22,7 @@ in
     height = lib.mkOption {
       type = lib.types.int;
       default = 700;
-      description = "the height of the kitty terminal";
+      description = "the size of the terminal determined by pixel height in a set aspect ratio";
     };
     text_size = lib.mkOption {
       type = lib.types.float;
