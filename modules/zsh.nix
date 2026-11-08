@@ -137,8 +137,12 @@
       Jtest() {
        TEMPFILENAME="''${1%.java}"
        javac "$TEMPFILENAME.java" || return
+       i=1
         for f in "''${@:2}"; do
+          echo "run: $i | inputs: ($f)"
           echo "$f" | java "$TEMPFILENAME"
+          ((i++))
+          echo
         done
        rm ./*.class
       }
